@@ -36,6 +36,17 @@ const ContactForm = () => {
       onSubmit={handleSubmit(sendEmail)}
       className='flex flex-col items-center w-full max-w-md space-y-4 p-6 bg-white shadow-md rounded-md'
     >
+      <h2 className='text-xl font-semibold mb-2'>
+        Lorem ipsum dolor sit amet?
+      </h2>
+      <p className='text-sm mb-4'>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. In consequatur
+        illo labore fugiat qui culpa, magni repudiandae veritatis sit unde
+        aliquam placeat officia quae.
+      </p>
+      <p className='text-sm mb-4'>
+        Voluptates, voluptatem? Unde, nostrum! Sint, ab.
+      </p>
       {/* Form fields for name, email, and message */}
       <input
         type='text'
