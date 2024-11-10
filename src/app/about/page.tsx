@@ -3,8 +3,8 @@ import Link from 'next/link';
 
 export default function About() {
   return (
-    <main className='flex flex-col items-center max-w-2xl p-4'>
-      <h1 className='text-4xl font-bold my-8'>About Us</h1>
+    <section className='flex flex-col items-center max-w-2xl p-4'>
+      <h1 className='text-4xl font-bold text-center my-8'>About Us</h1>
       <p className='max-w-md mb-12 md:max-w-2xl'>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga sit
         deleniti autem, nostrum voluptates blanditiis quisquam repudiandae
@@ -79,7 +79,7 @@ export default function About() {
       </section>
 
       {/* Final Paragraph */}
-      <p className='max-w-md md:max-w-2xl'>
+      <p className='max-w-md mb-12 md:max-w-2xl'>
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur
         molestiae nesciunt hic delectus! Quaerat mollitia at maxime eveniet
         illum, voluptatibus porro culpa fugiat cupiditate, vitae omnis? Hic
@@ -87,7 +87,7 @@ export default function About() {
       </p>
 
       {/* Contact Button */}
-      <div className='py-12'>
+      <div className='mb-8'>
         <Link
           href='/contact'
           className='px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700'
@@ -95,6 +95,6 @@ export default function About() {
           Contact Us
         </Link>
       </div>
-    </main>
+    </section>
   );
 }
