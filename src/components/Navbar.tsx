@@ -45,20 +45,21 @@ export default function Navbar() {
 
   return (
     <nav className='sticky top-0 z-50 w-full bg-gray-800'>
-      <div className='flex justify-between grow'>
-        {/* Logo Text */}
-        <h1 className='text-white p-4'>MySite</h1>
-        <div className='flex justify-end p-4'>
-          {/* Desktop Menu */}
-          <ul className='hidden sm:flex text-white'>
-            {navItems.map((item) => (
-              <li key={item.text} className='mr-4'>
-                <Link href={item.href}>{item.text}</Link>
-              </li>
-            ))}
-          </ul>
+      <div className='flex justify-between grow p-4 sm:grid sm:grid-cols-3 sm:items-center sm:x-auto'>
+        {/* Logo */}
+        <h1 className='text-white text-left'>MySite</h1>
 
-          {/* Hamburger Icon */}
+        {/* Nav Links (Hidden on mobile) */}
+        <ul className='hidden justify-center space-x-16 text-white sm:flex lg:space-x-20'>
+          {navItems.map((item) => (
+            <li key={item.text}>
+              <Link href={item.href}>{item.text}</Link>
+            </li>
+          ))}
+        </ul>
+
+        {/* Hamburger Icon (Visible on mobile) */}
+        <div className='flex justify-end'>
           <button className='text-white sm:hidden' onClick={toggleMenu}>
             {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
           </button>
