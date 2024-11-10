@@ -4,6 +4,8 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
+import LightDarkToggle from './LightDarkToggle';
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
@@ -46,10 +48,10 @@ export default function Navbar() {
   return (
     <nav className='sticky top-0 z-50 w-full bg-gray-800'>
       <div className='flex justify-between grow p-4 sm:grid sm:grid-cols-3 sm:items-center sm:x-auto'>
-        {/* Logo */}
+        {/* Left Column - Logo */}
         <h1 className='text-white text-left'>MySite</h1>
 
-        {/* Nav Links (Hidden on mobile) */}
+        {/* Center Column - Nav Links (Hidden on mobile) */}
         <ul className='hidden justify-center space-x-16 text-white sm:flex lg:space-x-20'>
           {navItems.map((item) => (
             <li key={item.text}>
@@ -58,11 +60,17 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* Hamburger Icon (Visible on mobile) */}
+        {/* Right Column - Hamburger Icon and LightDarkToggle */}
         <div className='flex justify-end'>
+          {/* Hamburger Icon (Visible on mobile) */}
           <button className='text-white sm:hidden' onClick={toggleMenu}>
             {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
           </button>
+
+          {/* Light/Dark mode toggle (hidden on mobile) */}
+          <div className='hidden sm:block'>
+            <LightDarkToggle />
+          </div>
         </div>
       </div>
 
