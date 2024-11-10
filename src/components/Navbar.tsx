@@ -8,7 +8,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className='w-full bg-gray-800'>
+    <nav className='w-full sticky top-0 bg-gray-800'>
       <div className='max-w-sm mx-auto px-4'>
         <ul className='flex justify-between py-4 text-white'>
           {navItems.map((item) => (
